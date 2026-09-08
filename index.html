@@ -1711,7 +1711,26 @@ Sincerely,
       function runSuggestedQuery(q) { document.getElementById('cfAiQueryInput').value = q; executeCfAiSearch(); }
       async function executeCfAiSearch() { const i = document.getElementById('cfAiQueryInput'), b = document.getElementById('cfAiResultBox'), btn = document.getElementById('cfAiSubmitBtn'), q = i.value.trim(); if (!q) return; b.classList.remove('empty'); b.innerHTML = '<span >⚡ Searching 1,024-D vector index and synthesizing response with Llama 3.3...</span>'; btn.disabled = true; try { const r = await fetch('https://3601505c-6b1d-4f8a-8c87-be76afe18393.search.ai.cloudflare.com/chat/completions', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: [{ role: 'system', content: 'You are the Charles W. Kinslow IV Regulatory Archive AI Assistant. Answer authoritatively with direct citations to the archive.' }, { role: 'user', content: q }] }) }); if (!r.ok) throw new Error('HTTP ' + r.status); const d = await r.json(); b.innerHTML = d.choices && d.choices[0] && d.choices[0].message ? d.choices[0].message.content : (d.response || JSON.stringify(d)); } catch (err) { try { const sr = await fetch('https://3601505c-6b1d-4f8a-8c87-be76afe18393.search.ai.cloudflare.com/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ query: q }) }), sd = await sr.json(); if (sd.results && sd.results.length > 0) { let h = '<strong>Top Matching Excerpts from Archive:</strong><br><br>'; sd.results.slice(0, 3).forEach((x, n) => { h += `<div ><div >${x.title || x.url || 'Doc #' + (n + 1)}</div><div >${x.content || x.text || x.excerpt || JSON.stringify(x)}</div></div>`; }); b.innerHTML = h; } else { b.innerHTML = '<span >No exact semantic matches found.</span>'; } } catch (se) { b.innerHTML = '<span >Unable to connect to AI Search: ' + se.message + '</span>'; } } finally { btn.disabled = false; } }</script>
   <!-- End Cloudflare AI Search Widget -->
-
+<!-- STICKY MOBILE DOCK (THUMB-ZONE ACCESS) -->
+<nav class="mobile-bottom-dock" aria-label="Mobile Quick Actions">
+  <a href="tel:8554233729,1,,0%230%23" class="dock-action">
+    <span style="font-size: 18px;">📞</span>
+    <span>Call Human</span>
+  </a>
+  <a href="#dispute-letter-template" class="dock-action">
+    <span style="font-size: 18px;">📄</span>
+    <span>Dispute Letter</span>
+  </a>
+  <a href="tools/bnpl-refund-delay-diagnostic.html" class="dock-action primary-dock">
+    <span style="font-size: 18px;">⚡</span>
+    <span>Diagnostic</span>
+  </a>
+  <a href="tools/affirm-bot-bypass-cheat-sheet.html" class="dock-action">
+    <span style="font-size: 18px;">🛡️</span>
+    <span>Cheat Sheet</span>
+  </a>
+</nav>
+   
 </body>
 
 </html>
