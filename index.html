@@ -2,10 +2,7 @@
 <html lang="en-US">
 
 <head>
-  <meta name="google-site-verification" content="vT88dkj2K0Me4YpnC0ryNFiyrvqzWKQM_3ozZ97njNU" />
-
-
-
+  <meta name="description" content="Public regulatory archive and consumer defense toolkit for Affirm refund disputes, bot containment loops, CFPB dockets, and Regulation Z compliance.">
 
   <meta charset="UTF-8">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -16,7 +13,7 @@
   <title>Affirm Refund Disputes, Denials &amp; Consumer Guide | Charles W. Kinslow IV</title>
   <meta name="description"
     content="Free tools and step-by-step letters from an everyday consumer to help you beat Affirm customer service bot loops, fix refund delays, and protect your credit score.">
-  <link rel="canonical" href="https://kinslow-regulatory-archive.org/">
+  <link rel="canonical" href="https://chasekn43.github.io/regulatory-archive-2026/">
 
   <!-- Open Graph / Facebook / LinkedIn (9 Principles Optimized) -->
   <meta property="og:type" content="website">
@@ -860,27 +857,144 @@
       color: var(--text-main);
       letter-spacing: -0.02em;
       font-weight: 800;
-    font-weight: 800;
-  }
-</style>
-</head>
-  
- <body class="guide-page">
+    }
+    /* Mobile Emergency Bar */
+    .mobile-emergency-bar {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 10px 16px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .mobile-emergency-bar a.phone-tap-link {
+      color: #38bdf8;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    .dtmf-pill {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
 
-  <!-- CONSOLIDATED MOBILE EMERGENCY STRIP -->
-  <aside class="mobile-emergency-bar" role="complementary" aria-label="Consumer alert">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; width: 100%;">
-      <div>
-        <span>📞 <strong>Affirm Human Bypass:</strong> </span>
-        <a href="tel:8554233729,1,,0%230%23" class="phone-tap-link">(855) 423-3729</a>
-        <span class="dtmf-pill" style="margin-left: 6px;">Press 1 &rarr; 0#0#</span>
-      </div>
-      <a href="tools/affirm-bot-bypass-cheat-sheet.html" style="color: #38bdf8; font-size: 12px; font-weight: 700; text-decoration: underline;">
-        View Escalation Codes &rarr;
-      </a>
+    /* Collapsible Dispute Letter & Expand Button */
+    .dispute-letter-container {
+      position: relative;
+      max-height: 250px;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .dispute-letter-container.expanded {
+      max-height: none;
+    }
+    .letter-fade-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(transparent, #ffffff);
+      pointer-events: none;
+    }
+    .dispute-letter-container.expanded .letter-fade-overlay {
+      display: none;
+    }
+    .btn-expand-letter {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 12px;
+      background: #f1f5f9;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      color: #0f172a;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+    .btn-expand-letter:hover {
+      background: #e2e8f0;
+      border-color: #94a3b8;
+    }
+
+    /* Sticky Mobile Bottom Dock */
+    .mobile-bottom-dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-top: 1px solid #cbd5e1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+      box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.08);
+      z-index: 9998;
+    }
+    .dock-action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      color: #475569;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none !important;
+    }
+    .dock-action:hover, .dock-action:active {
+      color: #1d4ed8;
+    }
+    .dock-action.primary-dock {
+      color: #1d4ed8;
+    }
+    @media (min-width: 768px) {
+      .mobile-bottom-dock {
+        display: none !important;
+      }
+    }
+
+  </style>
+</head>
+
+<body class="guide-page">
+
+  <!-- TOP CONSUMER REALITY BANNER -->
+  <aside class="top-legal-bar" role="complementary" aria-label="Consumer alert">
+    <div class="container"
+      style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+      <span>🛒 <strong>Splitting essentials or retail purchases with 'Pay in 4'?</strong> Don't let an automated bot
+        overdraft your bank account.</span>
+      <a href="tools/bnpl-refund-delay-diagnostic.html"
+        style="color: #38bdf8 !important; font-weight: 700; text-decoration: underline; font-weight: 600; font-weight: 700; text-decoration: underline;; color: #1d4ed8; font-weight: 700; text-decoration: underline; font-weight: 700;">Protect
+        Your Account Now &rarr;</a>
     </div>
   </aside>
 
+  <!-- THEORY 3: QUICK PRIMACY ACCESS BAR (CRISP LIGHT GRAY - NO AMBER COMPETITION) -->
+  <div class="primacy-phone-bar">
+    <div class="container"
+      style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+      <span style="color: #0f172a; font-weight: 700;">📞 Need to talk to a human at Affirm right now?</span>
+      <span style="color: #334155; font-weight: 600;">Dial <strong>(855) 423-3729</strong> &rarr; Press
+        <strong>1</strong> &rarr; Press <strong>0#0#</strong> <a href="tools/affirm-bot-bypass-cheat-sheet.html"
+          style="color: #1d4ed8; font-weight: 700; margin-left: 8px; text-decoration: underline;; color: #1d4ed8; font-weight: 700; text-decoration: underline; font-weight: 700;">View
+          Phone Bypass Directory (Opens Instantly) &rarr;</a></span>
+    </div>
+  </div>
+
+  <!-- HERO SECTION: ASYMMETRIC GOLDEN RATIO (THEORY 1, 2, 4, 5, 7, 8) -->
   <header class="hero-section" style="color: #f8fafc;" style="color: #cbd5e1;" style="color: #cbd5e1;" role="banner">
     <div class="container">
 
@@ -1132,10 +1246,8 @@
         disputed amount, and complete resolution within 2 billing cycles without issuing adverse credit reports.
       </p>
 
-            <!-- COLLAPSIBLE LETTER CONTAINER -->
-      <div class="dispute-letter-container" id="letter-wrapper">
-        <pre id="dispute-notice-text"
-          style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; font-family: monospace; font-size: 13px; color: #0f172a; line-height: 1.6; white-space: pre-wrap; word-break: break-word; user-select: all; margin: 0;">
+      <pre id="dispute-notice-text"
+        style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; font-family: monospace; font-size: 13px; color: #0f172a; line-height: 1.6; white-space: pre-wrap; word-break: break-word; user-select: all;">
 TO: Affirm, Inc. (resolutions@affirm.com, legal@affirm.com)
 FROM: [Your Full Legal Name]
 DATE: [Current Date]
@@ -1172,40 +1284,8 @@ Sincerely,
 [Your Phone Number]
 [Your Mailing Address]
 </pre>
-        <div class="letter-fade-overlay" id="letter-fade"></div>
-      </div>
-
-      <button type="button" class="btn-expand-letter" id="toggle-letter-btn" onclick="toggleLetterExpand()">
-        ▼ Expand Full Dispute Letter
-      </button>
 
       <script>
-        function toggleLetterExpand() {
-          var wrapper = document.getElementById("letter-wrapper");
-          var btn = document.getElementById("toggle-letter-btn");
-          if (wrapper.classList.contains("expanded")) {
-            wrapper.classList.remove("expanded");
-            btn.innerText = "▼ Expand Full Dispute Letter";
-          } else {
-            wrapper.classList.add("expanded");
-            btn.innerText = "▲ Collapse Dispute Letter";
-          }
-        }
-
-        function copyDisputeTemplate() {
-          var text = document.getElementById("dispute-notice-text").innerText;
-          navigator.clipboard.writeText(text).then(function () {
-            var btn = document.getElementById("copy-template-btn");
-            btn.innerHTML = "<span>✓ Copied to Clipboard!</span>";
-            btn.style.background = "#15803d";
-            setTimeout(function () {
-              btn.innerHTML = "<span>📋 Copy Notice to Clipboard</span>";
-              btn.style.background = "#1d4ed8";
-            }, 3000);
-          });
-        }
-      </script>
-
         function copyDisputeTemplate() {
           var text = document.getElementById("dispute-notice-text").innerText;
           navigator.clipboard.writeText(text).then(function () {
@@ -1711,6 +1791,7 @@ Sincerely,
       function runSuggestedQuery(q) { document.getElementById('cfAiQueryInput').value = q; executeCfAiSearch(); }
       async function executeCfAiSearch() { const i = document.getElementById('cfAiQueryInput'), b = document.getElementById('cfAiResultBox'), btn = document.getElementById('cfAiSubmitBtn'), q = i.value.trim(); if (!q) return; b.classList.remove('empty'); b.innerHTML = '<span >⚡ Searching 1,024-D vector index and synthesizing response with Llama 3.3...</span>'; btn.disabled = true; try { const r = await fetch('https://3601505c-6b1d-4f8a-8c87-be76afe18393.search.ai.cloudflare.com/chat/completions', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: [{ role: 'system', content: 'You are the Charles W. Kinslow IV Regulatory Archive AI Assistant. Answer authoritatively with direct citations to the archive.' }, { role: 'user', content: q }] }) }); if (!r.ok) throw new Error('HTTP ' + r.status); const d = await r.json(); b.innerHTML = d.choices && d.choices[0] && d.choices[0].message ? d.choices[0].message.content : (d.response || JSON.stringify(d)); } catch (err) { try { const sr = await fetch('https://3601505c-6b1d-4f8a-8c87-be76afe18393.search.ai.cloudflare.com/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ query: q }) }), sd = await sr.json(); if (sd.results && sd.results.length > 0) { let h = '<strong>Top Matching Excerpts from Archive:</strong><br><br>'; sd.results.slice(0, 3).forEach((x, n) => { h += `<div ><div >${x.title || x.url || 'Doc #' + (n + 1)}</div><div >${x.content || x.text || x.excerpt || JSON.stringify(x)}</div></div>`; }); b.innerHTML = h; } else { b.innerHTML = '<span >No exact semantic matches found.</span>'; } } catch (se) { b.innerHTML = '<span >Unable to connect to AI Search: ' + se.message + '</span>'; } } finally { btn.disabled = false; } }</script>
   <!-- End Cloudflare AI Search Widget -->
+
 <!-- STICKY MOBILE DOCK (THUMB-ZONE ACCESS) -->
 <nav class="mobile-bottom-dock" aria-label="Mobile Quick Actions">
   <a href="tel:8554233729,1,,0%230%23" class="dock-action">
@@ -1730,7 +1811,7 @@ Sincerely,
     <span>Cheat Sheet</span>
   </a>
 </nav>
-   
+
 </body>
 
 </html>
