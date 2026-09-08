@@ -1132,8 +1132,10 @@
         disputed amount, and complete resolution within 2 billing cycles without issuing adverse credit reports.
       </p>
 
-      <pre id="dispute-notice-text"
-        style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; font-family: monospace; font-size: 13px; color: #0f172a; line-height: 1.6; white-space: pre-wrap; word-break: break-word; user-select: all;">
+            <!-- COLLAPSIBLE LETTER CONTAINER -->
+      <div class="dispute-letter-container" id="letter-wrapper">
+        <pre id="dispute-notice-text"
+          style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; font-family: monospace; font-size: 13px; color: #0f172a; line-height: 1.6; white-space: pre-wrap; word-break: break-word; user-select: all; margin: 0;">
 TO: Affirm, Inc. (resolutions@affirm.com, legal@affirm.com)
 FROM: [Your Full Legal Name]
 DATE: [Current Date]
@@ -1170,8 +1172,40 @@ Sincerely,
 [Your Phone Number]
 [Your Mailing Address]
 </pre>
+        <div class="letter-fade-overlay" id="letter-fade"></div>
+      </div>
+
+      <button type="button" class="btn-expand-letter" id="toggle-letter-btn" onclick="toggleLetterExpand()">
+        ▼ Expand Full Dispute Letter
+      </button>
 
       <script>
+        function toggleLetterExpand() {
+          var wrapper = document.getElementById("letter-wrapper");
+          var btn = document.getElementById("toggle-letter-btn");
+          if (wrapper.classList.contains("expanded")) {
+            wrapper.classList.remove("expanded");
+            btn.innerText = "▼ Expand Full Dispute Letter";
+          } else {
+            wrapper.classList.add("expanded");
+            btn.innerText = "▲ Collapse Dispute Letter";
+          }
+        }
+
+        function copyDisputeTemplate() {
+          var text = document.getElementById("dispute-notice-text").innerText;
+          navigator.clipboard.writeText(text).then(function () {
+            var btn = document.getElementById("copy-template-btn");
+            btn.innerHTML = "<span>✓ Copied to Clipboard!</span>";
+            btn.style.background = "#15803d";
+            setTimeout(function () {
+              btn.innerHTML = "<span>📋 Copy Notice to Clipboard</span>";
+              btn.style.background = "#1d4ed8";
+            }, 3000);
+          });
+        }
+      </script>
+
         function copyDisputeTemplate() {
           var text = document.getElementById("dispute-notice-text").innerText;
           navigator.clipboard.writeText(text).then(function () {
