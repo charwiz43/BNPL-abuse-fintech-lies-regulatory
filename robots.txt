@@ -1,5 +1,5 @@
 # BypassBots.org — Crawler Directives
-# https://bypassbots.org/
+# https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory
 
 User-agent: *
 Allow: /
@@ -49,4 +49,5 @@ Disallow: /scratch/
 Disallow: /logs/
 Disallow: /__pycache__/
 
-Sitemap: https://bypassbots.org/sitemap.xml
+Sitemap: https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/sitemap.xml
+
