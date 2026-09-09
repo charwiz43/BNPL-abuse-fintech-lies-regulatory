@@ -8,13 +8,16 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <!-- BASE URL TAG FOR CONSISTENT ASSET RESOLUTION -->
+  <!-- BASE URL: Guarantees style.css and all internal links stay inside this repository -->
   <base href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/">
 
   <title>Affirm Refund Disputes, Denials &amp; Consumer Guide | Charles W. Kinslow IV</title>
   <meta name="description"
     content="Free tools and step-by-step letters from an everyday consumer to help you beat Affirm customer service bot loops, fix refund delays, and protect your credit score.">
   <link rel="canonical" href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/">
+
+  <!-- SAME-REPO CSS LINK (Resolves automatically to /BNPL-abuse-fintech-lies-regulatory/style.css) -->
+  <link rel="stylesheet" href="style.css">
 
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
@@ -32,434 +35,14 @@
     content="Free statutory dispute letters, CFPB docket records, and bot bypass shortcuts to resolve Affirm refund delays under Regulation Z.">
   <meta name="twitter:image" content="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/icon-512.png">
 
-  <!-- MANIFEST CONFIGURED FOR SUBFOLDER SCOPE -->
+  <!-- MANIFEST -->
   <link rel="manifest"
     href="data:application/manifest+json;charset=utf-8,%7B%22name%22%3A%22Charles%20W.%20Kinslow%20IV%20%7C%20Fintech%20%26%20BNPL%20Regulatory%20Archive%22%2C%22short_name%22%3A%22Kinslow%20Archive%22%2C%22description%22%3A%22Public%20regulatory%20archive%20of%20CFPB%20Complaint%20%23260717-35668593%2C%20primary%20exhibits%2C%20and%20legal%20research.%22%2C%22start_url%22%3A%22/BNPL-abuse-fintech-lies-regulatory/%22%2C%22scope%22%3A%22/BNPL-abuse-fintech-lies-regulatory/%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230b0f19%22%2C%22theme_color%22%3A%22%230b0f19%22%2C%22orientation%22%3A%22portrait-primary%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22/BNPL-abuse-fintech-lies-regulatory/icon-192.png%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image/png%22%2C%22purpose%22%3A%22any%20maskable%22%7D%2C%7B%22src%22%3A%22/BNPL-abuse-fintech-lies-regulatory/icon-512.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image/png%22%2C%22purpose%22%3A%22any%20maskable%22%7D%5D%7D">
 
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
-  <link rel="apple-touch-icon" href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
   <meta name="theme-color" content="#f8f9fa">
-
-  <style>
-    :root {
-      --bg-canvas: #f8f9fa;
-      --bg-surface: #ffffff;
-      --bg-surface-subtle: #f1f5f9;
-      --text-main: #0f172a;
-      --text-body: #334155;
-      --text-muted: #475569;
-      --border-subtle: #e2e8f0;
-      --border-strong: #cbd5e1;
-      --accent-primary: #1d4ed8;
-      --accent-primary-hover: #1e40af;
-      --accent-primary-bg: #eff6ff;
-      --accent-amber: #b45309;
-      --accent-amber-bg: #fffbeb;
-      --accent-amber-border: #fde68a;
-      --accent-sage: #15803d;
-      --accent-sage-bg: #f0fdf4;
-      --accent-sage-border: #bbf7d0;
-      --radius-lg: 12px;
-      --radius-md: 8px;
-      --radius-sm: 6px;
-      --maxw: 1200px;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      -webkit-text-size-adjust: 100%;
-      scroll-behavior: smooth;
-      background-color: var(--bg-canvas);
-    }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Outfit", Helvetica, Arial, sans-serif;
-      background-color: var(--bg-canvas);
-      color: var(--text-body);
-      line-height: 1.75;
-      font-size: 17px;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--accent-primary);
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    a:hover {
-      color: var(--accent-primary-hover);
-      text-decoration: underline;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 36px;
-      align-items: start;
-    }
-
-    @media(min-width: 992px) {
-      .hero-grid {
-        grid-template-columns: 1.18fr 0.95fr;
-        gap: 40px;
-        align-items: center;
-      }
-    }
-
-    .hero-section {
-      background: #ffffff !important;
-      border-bottom: 1px solid var(--border-subtle) !important;
-      padding: 40px 0 36px;
-    }
-
-    .btn-primary-isolated {
-      display: block;
-      width: 100%;
-      background: var(--accent-primary);
-      color: #ffffff !important;
-      font-weight: 800;
-      font-size: 16px;
-      padding: 15px 22px;
-      border-radius: var(--radius-sm);
-      text-decoration: none !important;
-      text-align: center;
-      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.3);
-      transition: all 0.2s ease;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-primary-isolated:hover {
-      background: var(--accent-primary-hover);
-      box-shadow: 0 6px 20px rgba(29, 78, 216, 0.4);
-      transform: translateY(-1px);
-    }
-
-    .status-option-card {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 14px;
-      border: 1.5px solid #cbd5e1;
-      border-radius: var(--radius-md);
-      background: #f8fafc;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      margin-bottom: 10px;
-      font-size: 14px;
-      font-weight: 600;
-      color: #0f172a;
-    }
-
-    .status-option-card:hover {
-      border-color: var(--accent-primary);
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
-    }
-
-    .status-option-card.selected {
-      border-color: var(--accent-primary);
-      background: #eff6ff;
-      color: #1d4ed8;
-      font-weight: 700;
-    }
-
-    .radio-indicator {
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: 2px solid #94a3b8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all 0.2s ease;
-    }
-
-    .status-option-card.selected .radio-indicator {
-      border-color: #1d4ed8;
-      background: #1d4ed8;
-    }
-
-    .status-option-card.selected .radio-indicator::after {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #ffffff;
-    }
-
-    .timeline-roadmap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      margin: 14px 0 18px;
-    }
-
-    .timeline-roadmap::before {
-      content: "";
-      position: absolute;
-      top: 14px;
-      left: 20px;
-      right: 20px;
-      height: 2px;
-      background: #e2e8f0;
-      z-index: 1;
-    }
-
-    .roadmap-node {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      flex: 1;
-    }
-
-    .roadmap-circle {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 2px solid #cbd5e1;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 800;
-      color: #475569;
-      margin-bottom: 4px;
-      transition: all 0.3s ease;
-    }
-
-    .roadmap-node.active .roadmap-circle {
-      background: #1d4ed8;
-      border-color: #1d4ed8;
-      color: #ffffff;
-      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2);
-    }
-
-    .roadmap-node.completed .roadmap-circle {
-      background: #15803d;
-      border-color: #15803d;
-      color: #ffffff;
-    }
-
-    .roadmap-label {
-      font-size: 11px;
-      font-weight: 700;
-      color: #475569;
-      display: block;
-    }
-
-    .roadmap-node.active .roadmap-label {
-      color: #0f172a;
-      font-weight: 800;
-    }
-
-    .tool-card {
-      background: #ffffff;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.2s ease;
-      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
-    }
-
-    .tool-card:hover {
-      border-color: var(--border-strong);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
-    }
-
-    .docket-card {
-      background: #f8fafc;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 18px;
-      position: relative;
-      transition: all 0.2s ease;
-    }
-
-    .docket-card:hover {
-      background: #ffffff;
-      border-color: var(--accent-primary);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
-    }
-
-    .docket-card-featured {
-      background: #ffffff;
-      border: 2px solid #1d4ed8;
-      border-radius: var(--radius-md);
-      padding: 18px;
-      position: relative;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.1);
-    }
-
-    .docket-card-featured:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(29, 78, 216, 0.2);
-    }
-
-    .docket-card a.stretched-link::after,
-    .docket-card-featured a.stretched-link::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
-
-    .badge-clean {
-      background: #f1f5f9;
-      border: 1px solid #cbd5e1;
-      color: #334155;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 9999px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .badge-amber {
-      background: var(--accent-amber-bg);
-      border: 1px solid var(--accent-amber-border);
-      color: var(--accent-amber);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 9999px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .badge-featured {
-      background: #1d4ed8;
-      color: #ffffff;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 3px 8px;
-      border-radius: 9999px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    h1, h2, h3, h4 {
-      color: var(--text-main);
-      letter-spacing: -0.02em;
-      font-weight: 800;
-    }
-
-    .mobile-emergency-bar {
-      background: #0f172a;
-      color: #f8fafc;
-      padding: 10px 16px;
-      font-size: 13px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      border-bottom: 1px solid #1e293b;
-    }
-
-    .mobile-emergency-bar a.phone-tap-link {
-      color: #38bdf8;
-      font-weight: 700;
-      text-decoration: underline;
-      display: inline-flex;
-      align-items: center;
-      min-height: 44px;
-    }
-
-    .dtmf-pill {
-      background: #1e293b;
-      border: 1px solid #334155;
-      color: #cbd5e1;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
-
-    .dispute-notice-box {
-      background: #f8fafc;
-      border: 1.5px solid #cbd5e1;
-      border-radius: 8px;
-      padding: 18px;
-      font-family: monospace;
-      font-size: 13px;
-      color: #0f172a;
-      line-height: 1.6;
-      white-space: pre-wrap;
-      word-break: break-word;
-      user-select: all;
-      margin: 0 0 16px 0;
-    }
-
-    .mobile-bottom-dock {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #ffffff;
-      border-top: 1px solid #cbd5e1;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
-      box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.08);
-      z-index: 9998;
-    }
-
-    .dock-action {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 3px;
-      color: #475569;
-      font-size: 11px;
-      font-weight: 700;
-      text-decoration: none !important;
-      min-height: 48px;
-      min-width: 60px;
-    }
-
-    .dock-action:hover, .dock-action:active, .dock-action.primary-dock {
-      color: #1d4ed8;
-    }
-
-    @media (min-width: 768px) {
-      .mobile-bottom-dock {
-        display: none !important;
-      }
-    }
-  </style>
 
   <!-- SCHEMA METADATA -->
   <script type="application/ld+json">
@@ -564,7 +147,7 @@
         <a href="tel:8554233729,1,,0%230%23" class="phone-tap-link">(855) 423-3729</a>
         <span class="dtmf-pill" style="margin-left: 6px;">Press 1 &rarr; 0#0#</span>
       </div>
-      <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/tools/affirm-bot-bypass-cheat-sheet.html" style="color: #38bdf8; font-size: 13px; font-weight: 700; text-decoration: underline; min-height: 44px; display: inline-flex; align-items: center;">
+      <a href="tools/affirm-bot-bypass-cheat-sheet.html" style="color: #38bdf8; font-size: 13px; font-weight: 700; text-decoration: underline; min-height: 44px; display: inline-flex; align-items: center;">
         View Escalation Codes &rarr;
       </a>
     </div>
@@ -654,7 +237,7 @@
             </div>
           </div>
 
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/tools/bnpl-refund-delay-diagnostic.html" class="btn-primary-isolated" id="launch-cta">
+          <a href="tools/bnpl-refund-delay-diagnostic.html" class="btn-primary-isolated" id="launch-cta">
             Launch Free Diagnostic (No Sign-Up • Generates Instantly) &rarr;
           </a>
 
@@ -699,7 +282,7 @@
         <span style="font-size: 13px; color: #334155; font-weight: 600;">100% Free • No Sign-Up</span>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
+      <div class="responsive-card-grid">
         <div class="tool-card">
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
@@ -711,7 +294,7 @@
               Direct phone tree bypass codes (skip automated SMS hang-ups), chatbot loop-killer phrases, and verified executive legal escalation email addresses.
             </p>
           </div>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/tools/affirm-bot-bypass-cheat-sheet.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">View Phone Bypass Directory (Opens Instantly) &rarr;</a>
+          <a href="tools/affirm-bot-bypass-cheat-sheet.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">View Phone Bypass Directory (Opens Instantly) &rarr;</a>
         </div>
 
         <div class="tool-card" style="border-color: #fde68a; background: #fffdfa;">
@@ -725,7 +308,7 @@
               Calculate debt-to-income spikes, compounding interest fees, and the exact countdown to collection network escalation to protect your credit score.
             </p>
           </div>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/tools/underwriting-credit-impact-calculator.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">Launch 120-Day Credit Risk Calculator (Interactive) &rarr;</a>
+          <a href="tools/underwriting-credit-impact-calculator.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">Launch 120-Day Credit Risk Calculator (Interactive) &rarr;</a>
         </div>
 
         <div class="tool-card">
@@ -739,7 +322,7 @@
               Step-by-step instructions to pay undisputed loan principal via external bank BillPay (ACH) if your mobile app access is locked during an active dispute.
             </p>
           </div>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/guides/affirm-bank-billpay-workaround.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">Read BillPay Workaround (Step-by-Step Guide) &rarr;</a>
+          <a href="guides/affirm-bank-billpay-workaround.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">Read BillPay Workaround (Step-by-Step Guide) &rarr;</a>
         </div>
 
         <div class="tool-card">
@@ -753,7 +336,7 @@
               Copy-paste helpful markdown reply snippets to drop into Reddit (r/Affirm, r/povertyfinance, r/CreditCards) to help other shoppers beat bot loops.
             </p>
           </div>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/tools/reddit-community-response-toolkit.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">Open Reddit Response Templates (Copy-Paste) &rarr;</a>
+          <a href="tools/reddit-community-response-toolkit.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">Open Reddit Response Templates (Copy-Paste) &rarr;</a>
         </div>
       </div>
     </section>
@@ -842,13 +425,13 @@ Sincerely,
         <p style="color: #334155; font-size: 14px; margin: 4px 0 0;">An in-depth look at fintech unit economics and warehouse lending covenants.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+      <div class="responsive-card-grid">
         <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px;">
           <h3 style="font-size: 18px; font-weight: 800; color: #0f172a; margin: 0 0 8px;">The $0.15 Bot Trap: Why Human Support Was Eliminated</h3>
           <p style="color: #334155; font-size: 14px; line-height: 1.6; margin: 0 0 12px;">
             A mathematical breakdown of BNPL unit economics: why low merchant discount take-rates force platforms to automate customer service into low-cost bot loops ($0.15) against live human calls ($14.00).
           </p>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/topics/bnpl-unit-economics-customer-service-containment.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">See $0.15 Bot Cost Analysis &rarr;</a>
+          <a href="topics/bnpl-unit-economics-customer-service-containment.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">See $0.15 Bot Cost Analysis &rarr;</a>
         </article>
 
         <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px;">
@@ -856,7 +439,7 @@ Sincerely,
           <p style="color: #334155; font-size: 14px; line-height: 1.6; margin: 0 0 12px;">
             How asset-backed securitization bank warehouse facility covenants incentivize fintech lenders to park disputed loans in artificial investigation loops, postponing loss recognition.
           </p>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/topics/affirm-short-seller-thesis-warehouse-covenants.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">Inspect Warehouse Facility Covenants &rarr;</a>
+          <a href="topics/affirm-short-seller-thesis-warehouse-covenants.html" style="font-weight: 700; font-size: 14px; color: #1d4ed8; text-decoration: underline;">Inspect Warehouse Facility Covenants &rarr;</a>
         </article>
       </div>
     </section>
@@ -868,38 +451,38 @@ Sincerely,
         <h2 id="docket-heading" style="font-size: 24px; font-weight: 800; color: #0f172a; margin: 4px 0 0;">📁 Official Evidence Docket: SEC, CFPB &amp; Police Filings</h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+      <div class="responsive-card-grid">
         <div class="docket-card-featured">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
             <strong style="font-size: 15px; color: #0f172a;">📁 CFPB Complaint Records</strong>
             <span class="badge-featured">⭐ Primary Exhibit</span>
           </div>
           <span style="font-size: 13px; color: #334155; display: block; margin-bottom: 8px;">Case #260716-1553638 &amp; Affirm responses</span>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/documents/cfpb-complaint-and-affirm-false-response.pdf" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Download CFPB Record (PDF) &rarr;</a>
+          <a href="documents/cfpb-complaint-and-affirm-false-response.pdf" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Download CFPB Record (PDF) &rarr;</a>
         </div>
 
         <div class="docket-card">
           <strong style="display: block; font-size: 15px; color: #0f172a; margin-bottom: 4px;">📁 SEC Form TCR Submission</strong>
           <span style="font-size: 13px; color: #334155; display: block; margin-bottom: 8px;">Whistleblower filing: TCR 17867-223-108-883</span>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/documents/sec-form-tcr-submission-confirmation-17867-223-108-883.pdf" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Download SEC Confirmation (PDF) &rarr;</a>
+          <a href="documents/sec-form-tcr-submission-confirmation-17867-223-108-883.pdf" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Download SEC Confirmation (PDF) &rarr;</a>
         </div>
 
         <div class="docket-card">
           <strong style="display: block; font-size: 15px; color: #0f172a; margin-bottom: 4px;">📁 Police &amp; Carrier Receipts</strong>
           <span style="font-size: 13px; color: #334155; display: block; margin-bottom: 8px;">Monroe Police #26-29572 &amp; DHL logs</span>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/documents/monroe-police-report-26-29572.pdf" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Inspect Police Report (PDF) &rarr;</a>
+          <a href="documents/monroe-police-report-26-29572.pdf" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Inspect Police Report (PDF) &rarr;</a>
         </div>
 
         <div class="docket-card">
           <strong style="display: block; font-size: 15px; color: #0f172a; margin-bottom: 4px;">📁 State Attorney General Notices</strong>
           <span style="font-size: 13px; color: #334155; display: block; margin-bottom: 8px;">CA AG #1553638 &amp; LA AG filings</span>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/documents/california-ag-dispute-notice.pdf" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Download AG Notices (PDF) &rarr;</a>
+          <a href="documents/california-ag-dispute-notice.pdf" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Download AG Notices (PDF) &rarr;</a>
         </div>
 
         <div class="docket-card">
           <strong style="display: block; font-size: 15px; color: #0f172a; margin-bottom: 4px;">📁 Raw JSON &amp; Session Record</strong>
           <span style="font-size: 13px; color: #334155; display: block; margin-bottom: 8px;">Full 3,450-page forensic session record &amp; audit transcript</span>
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/documents/raw-json-and-clean-session-record.pdf" target="_blank" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Download Full Record (PDF) &rarr;</a>
+          <a href="documents/raw-json-and-clean-session-record.pdf" target="_blank" class="stretched-link" style="font-weight: 700; font-size: 13px; color: #1d4ed8; text-decoration: underline;">Download Full Record (PDF) &rarr;</a>
         </div>
       </div>
     </section>
@@ -912,29 +495,29 @@ Sincerely,
           <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 6px 0 0;">Forensic Topics &amp; Statutory Analysis</h3>
         </div>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+      <div class="responsive-card-grid">
         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/topics/verity-je-status-429.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">⚡ Verity Status 429 &amp; Rate Limit Guide</a>
+          <a href="topics/verity-je-status-429.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">⚡ Verity Status 429 &amp; Rate Limit Guide</a>
           <span style="font-size: 13px; color: #475569; display: block;">Engineering protocol on resolving HTTP 429 connection throttling and retry loops.</span>
         </div>
         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/topics/tila-12cfr1026-closed-end-dispute-mechanics.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">⚖️ TILA 12 CFR § 1026 Dispute Mechanics</a>
+          <a href="topics/tila-12cfr1026-closed-end-dispute-mechanics.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">⚖️ TILA 12 CFR § 1026 Dispute Mechanics</a>
           <span style="font-size: 13px; color: #475569; display: block;">Statutory rights, mandatory billing error timelines, and provisional credit rules.</span>
         </div>
         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/topics/udaap-customer-service-failures.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">🤖 UDAAP Customer Service Failures</a>
+          <a href="topics/udaap-customer-service-failures.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">🤖 UDAAP Customer Service Failures</a>
           <span style="font-size: 13px; color: #475569; display: block;">Evidentiary review of unfair and deceptive practices in chatbot containment.</span>
         </div>
         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/topics/single-use-virtual-cards-reconciliation-loops.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">💳 Virtual Card Reconciliation Loops</a>
+          <a href="topics/single-use-virtual-cards-reconciliation-loops.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">💳 Virtual Card Reconciliation Loops</a>
           <span style="font-size: 13px; color: #475569; display: block;">Why merchant refund authorizations fail to settle across intermediary card ledgers.</span>
         </div>
         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/topics/apa-notice-and-comment-reliance-defenses.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">🏛️ APA Reliance &amp; Notice-and-Comment Defenses</a>
+          <a href="topics/apa-notice-and-comment-reliance-defenses.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">🏛️ APA Reliance &amp; Notice-and-Comment Defenses</a>
           <span style="font-size: 13px; color: #475569; display: block;">Fintech challenges to CFPB interpretive rules and administrative enforcement boundaries.</span>
         </div>
         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px;">
-          <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/topics/affirm-capital-stack-abs-warehouse-facility-risks.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">📈 Affirm ABS Warehouse Facility Risks</a>
+          <a href="topics/affirm-capital-stack-abs-warehouse-facility-risks.html" style="font-weight: 700; font-size: 15px; color: #1d4ed8; display: block; margin-bottom: 4px;">📈 Affirm ABS Warehouse Facility Risks</a>
           <span style="font-size: 13px; color: #475569; display: block;">Capital stack exposure, warehouse covenant defaults, and institutional analysis.</span>
         </div>
       </div>
@@ -949,7 +532,7 @@ Sincerely,
         Federal law (12 C.F.R. § 1026.13) gives you explicit statutory protections when returned goods are not credited. Generate your formal billing error notice in under 60 seconds.
       </p>
       <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-        <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/tools/bnpl-refund-delay-diagnostic.html" class="btn-primary-isolated" style="display: inline-block; width: auto; font-size: 16px; padding: 14px 32px;">
+        <a href="tools/bnpl-refund-delay-diagnostic.html" class="btn-primary-isolated" style="display: inline-block; width: auto; font-size: 16px; padding: 14px 32px;">
           Start Your 60-Second Refund Dispute Now &rarr;
         </a>
         <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
@@ -970,11 +553,11 @@ Sincerely,
         <span style="display: block; font-size: 13px; color: #64748b; font-style: italic; margin-top: 4px;">"Built for everyday consumers who shouldn't have to hire a lawyer to get their own money back."</span>
       </div>
       <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <a style="color: #60a5fa !important; font-weight: bold; text-decoration: underline;" href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/press-release.html">Official Press Release</a>
-        <a style="color: #60a5fa !important; font-weight: bold; text-decoration: underline;" href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/press-kit.html">Media Press Kit</a>
+        <a style="color: #60a5fa !important; font-weight: bold; text-decoration: underline;" href="press-release.html">Official Press Release</a>
+        <a style="color: #60a5fa !important; font-weight: bold; text-decoration: underline;" href="press-kit.html">Media Press Kit</a>
         <a style="color: #60a5fa !important; font-weight: bold; text-decoration: underline;" href="https://orcid.org/0009-0004-9464-679X" target="_blank" rel="noopener">ORCID: 0009-0004-9464-679X</a>
-        <a style="color: #60a5fa !important; font-weight: bold; text-decoration: underline;" href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/sitemap.xml">Sitemap Feed</a>
-        <a style="color: #60a5fa !important; font-weight: bold; text-decoration: underline;" href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/llms.txt">llms.txt</a>
+        <a style="color: #60a5fa !important; font-weight: bold; text-decoration: underline;" href="sitemap.xml">Sitemap Feed</a>
+        <a style="color: #60a5fa !important; font-weight: bold; text-decoration: underline;" href="llms.txt">llms.txt</a>
       </div>
     </div>
   </footer>
@@ -985,20 +568,19 @@ Sincerely,
       <span style="font-size: 18px;">📞</span>
       <span>Call Human</span>
     </a>
-    <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/#dispute-letter-template" class="dock-action">
+    <a href="#dispute-letter-template" class="dock-action">
       <span style="font-size: 18px;">📄</span>
       <span>Dispute Letter</span>
     </a>
-    <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/tools/bnpl-refund-delay-diagnostic.html" class="dock-action primary-dock">
+    <a href="tools/bnpl-refund-delay-diagnostic.html" class="dock-action primary-dock">
       <span style="font-size: 18px;">⚡</span>
       <span>Diagnostic</span>
     </a>
-    <a href="https://charwiz43.github.io/BNPL-abuse-fintech-lies-regulatory/tools/affirm-bot-bypass-cheat-sheet.html" class="dock-action">
+    <a href="tools/affirm-bot-bypass-cheat-sheet.html" class="dock-action">
       <span style="font-size: 18px;">🛡️</span>
       <span>Cheat Sheet</span>
     </a>
   </nav>
 
 </body>
-  
 </html>
